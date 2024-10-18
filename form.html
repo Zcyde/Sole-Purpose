@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sole Purpose</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="CSS/form.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="main-container">
+      <div class="frame">
+        <a href="index.html"><div class="sole-purpose-logo"></div></a>
+      </div>
+
+      <!-- Form -->
+      <div class="form-container">
+        <div class="form-header">
+          <button class="tab active">Sign Up</button>
+          <button class="tab">Log In</button>
+        </div>
+
+        <form class="form-content" action="#" method="POST">
+          <h2>Sign Up</h2>
+
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="First Name" required>
+
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Last Name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Email Address" required>
+
+          <!-- Account Type -->
+          <div class="radio-group1"></div>
+          <label>Account Type (Required)</label>
+          <div class="radio-group2">
+            <label><input type="radio" name="account-type" value="reseller" required> Reseller</label>
+            <label><input type="radio" name="account-type" value="customer" required> Customer</label>
+          </div>
+
+          <!-- Password -->
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Password" required pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d@$!%*?&]{8,}$" title="At least 8 characters long, 1 uppercase letter, 1 number, and 1 special character.">
+          <p class="password-hint">At least 8 characters long, 1 uppercase, 1 number, 1 special character</p>
+
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+
+          <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+      </div>
+    <script src="JS/form.js"></script>
+  </body>
+</html>
